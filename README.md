@@ -1,7 +1,7 @@
 # Kirby Microlighter
 
 A syntax-highlighted code block for Kirby's blocks field, powered by
-[MicroLighter](TODO-link-to-microlighter) by Dave Rupert.
+[MicroLighter](https://daverupert.com/2026/08/microlighter/) by Dave Rupert.
 
 Highlighting runs in the browser using the
 [CSS Custom Highlight API](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Custom_Highlight_API),
@@ -11,6 +11,8 @@ contain a code block, and language grammars are loaded on demand.
 
 > **Beta.** This plugin has had limited testing. Please test it with your own
 > setup before using it in production, and report issues.
+
+![The microcode block in the Kirby Panel](.github/panel.png)
 
 ## Features
 
