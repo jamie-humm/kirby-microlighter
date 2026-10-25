@@ -1,0 +1,43 @@
+/*
+ * Default styles for the microcode block. Loaded after the theme stylesheet,
+ * so rules here win over the theme. Colours come from the theme's
+ * --syntax-* custom properties (see dist/themes/*.css).
+ *
+ * Turn this file off with the `jamie-humm.kirby-microlighter.css` option,
+ * or tweak it from your own CSS via the --microlighter-* variables below.
+ *
+ * <micro-lighter> renders into a shadow root, so its internals can't be
+ * targeted with normal selectors. Use:
+ *   - the light-DOM <pre>/<code> it wraps (font, padding, radius, etc.)
+ *   - micro-lighter::part(line-numbers) and micro-lighter::part(copy-button)
+ *   - --syntax-* variables on micro-lighter to override theme colours
+ */
+
+/* One framed box: filename bar on top, code underneath, both in theme colours */
+.block-microcode {
+  --mc-border: var(--microlighter-border, color-mix(in srgb, var(--syntax-comment) 30%, transparent));
+  --mc-font: var(--microlighter-font, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+
+  margin-inline: 0;
+  background: var(--syntax-background);
+  border: 1px solid var(--mc-border);
+  border-radius: var(--microlighter-radius, 0.5rem);
+  overflow: hidden;
+}
+
+/* Filename bar, like an editor tab */
+.block-microcode figcaption {
+  padding: 0.625rem 1rem;
+  font: 0.8125rem / 1.4 var(--mc-font);
+  color: var(--syntax-comment);
+  border-bottom: 1px solid var(--mc-border);
+  overflow-wrap: anywhere;
+}
+
+/* Font size matches the line numbers (0.875rem), so the rows line up */
+.block-microcode pre {
+  margin: 0;
+  padding: 1rem;
+  font: 0.875rem / 1.6 var(--mc-font);
+  overflow-x: auto;
+}

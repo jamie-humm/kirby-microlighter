@@ -1,0 +1,24 @@
+{
+  "name": "jamie-humm/kirby-microlighter",
+  "description": "Kirby Microlighter: a syntax-highlighted code block for Kirby, powered by MicroLighter and the CSS Custom Highlight API.",
+  "type": "kirby-plugin",
+  "keywords": ["kirby", "kirby-cms", "kirby-plugin", "blocks", "code", "syntax-highlighting", "microlighter"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jamie Hunter"
+    }
+  ],
+  "require": {
+    "php": ">=8.2",
+    "getkirby/composer-installer": "^1.2"
+  },
+  "config": {
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
+  },
+  "extra": {
+    "installer-name": "kirby-microlighter"
+  }
+}

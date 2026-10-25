@@ -1,0 +1,74 @@
+name: Code (highlighted)
+icon: code
+preview: fields
+wysiwyg: true
+fields:
+  code:
+    label: Code
+    type: textarea
+    buttons: false
+    font: monospace
+    size: large
+    spellcheck: false
+    required: true
+  language:
+    label: Language
+    type: select
+    width: 1/2
+    default: javascript
+    required: true
+    options:
+      html: HTML
+      css: CSS
+      scss: SCSS
+      javascript: JavaScript
+      typescript: TypeScript
+      tsx: TSX
+      php: PHP
+      json: JSON
+      yaml: YAML
+      toml: TOML
+      ini: INI
+      markdown: Markdown
+      bash: Bash / Shell
+      powershell: PowerShell
+      python: Python
+      ruby: Ruby
+      sql: SQL
+      go: Go
+      rust: Rust
+      java: Java
+      csharp: C#
+      c: C
+      cpp: C++
+      swift: Swift
+      kotlin: Kotlin
+      lua: Lua
+      dockerfile: Dockerfile
+      graphql: GraphQL
+      vue: Vue
+      svelte: Svelte
+      astro: Astro
+      git-diff: Diff
+      assembly: Assembly (x86)
+      dart: Dart
+      elixir: Elixir
+      heex: HEEx
+      nginx: Nginx
+      objective-c: Objective-C
+      perl: Perl
+      r: R
+  filename:
+    label: Filename / caption
+    type: text
+    width: 1/2
+  lineNumbers:
+    label: Line numbers
+    type: toggle
+    width: 1/2
+    default: false
+  copyButton:
+    label: Copy button
+    type: toggle
+    width: 1/2
+    default: true
