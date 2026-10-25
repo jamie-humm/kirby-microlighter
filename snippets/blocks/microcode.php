@@ -11,13 +11,15 @@ if (trim((string)$code) === '') {
 
 $language = $block->language()->or('javascript')->value();
 $theme    = Assets::theme();
+$mode     = Assets::mode();
 $caption  = $block->filename()->value();
 
 // Only output assets on pages that have a code block, and only once
 echo Assets::once();
 ?>
 <?php /* Theme attribute on the figure so the caption can use the --syntax-* colours too */ ?>
-<figure class="block-microcode" data-syntax-theme="<?= esc($theme, 'attr') ?>">
+<?php /* Themes use light-dark(), so pinning color-scheme picks one side of every colour */ ?>
+<figure class="block-microcode" data-syntax-theme="<?= esc($theme, 'attr') ?>"<?= $mode !== 'auto' ? ' style="color-scheme: ' . $mode . '"' : '' ?>>
   <?php if ($caption): ?>
   <figcaption><?= esc($caption) ?></figcaption>
   <?php endif ?>

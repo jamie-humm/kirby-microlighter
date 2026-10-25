@@ -30,6 +30,16 @@ class Assets
 		return $theme;
 	}
 
+	/**
+	 * Configured colour scheme: `light`, `dark` or `auto` (follows the visitor's preference)
+	 */
+	public static function mode(): string
+	{
+		$mode = option('jamie-humm.kirby-microlighter.mode', 'auto');
+
+		return in_array($mode, ['light', 'dark'], true) ? $mode : 'auto';
+	}
+
 	public static function once(): string
 	{
 		if (static::$loaded === true) {
@@ -64,6 +74,8 @@ App::plugin('jamie-humm/kirby-microlighter', [
 		// github, vscode-plus, dracula, monokai, night-owl, solarized-light,
 		// min, cobalt2, flexoki, gruvbox, tokyo-night, vesper
 		'theme' => 'github',
+		// auto (follows the visitor's preference), light or dark
+		'mode' => 'auto',
 		// Load the plugin's default block styles (assets/microlighter.css)
 		'css' => true,
 	],

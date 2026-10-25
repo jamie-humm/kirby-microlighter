@@ -57,13 +57,16 @@ return [
         // github (default), vscode-plus, dracula, monokai, night-owl,
         // solarized-light, min, cobalt2, flexoki, gruvbox, tokyo-night, vesper
         'theme' => 'github',
+        // auto (default) follows the visitor's light/dark preference,
+        // light or dark forces one
+        'mode' => 'auto',
         // false to skip the plugin's default block styles
         'css' => true,
     ],
 ];
 ```
 
-An unknown theme name falls back to `github`.
+An unknown theme name falls back to `github`, and an unknown mode to `auto`.
 
 ## Styling
 
@@ -89,8 +92,10 @@ micro-lighter::part(line-numbers) { opacity: 0.5; }
 Theme colours are `--syntax-*` custom properties (see `dist/themes/*.css`) and
 can be overridden on `.block-microcode`.
 
-Themes follow the visitor's light/dark preference. To force one, set
-`color-scheme: light` (or `dark`) on `.block-microcode`.
+Themes follow the visitor's light/dark preference unless the `mode` option
+forces one. To switch per page (for example, with your own dark mode toggle),
+leave `mode` on `auto` and set `color-scheme: light` (or `dark`) on
+`.block-microcode` from your CSS.
 
 ## Dynamic content
 
