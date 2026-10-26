@@ -9,9 +9,6 @@ so the code stays plain text in your HTML: no `<span>` soup, no server-side
 processing. The script (~9 KB) and stylesheets are only loaded on pages that
 contain a code block, and language grammars are loaded on demand.
 
-> **Beta.** This plugin has had limited testing. Please test it with your own
-> setup before using it in production, and report issues.
-
 ![The microcode block in the Kirby Panel](.github/panel.png)
 
 ## Features
@@ -23,7 +20,7 @@ contain a code block, and language grammars are loaded on demand.
 ## Installation
 
 ```
-composer require jamie-humm/kirby-microlighter:^1.0@beta
+composer require jamie-humm/kirby-microlighter
 ```
 
 Or copy this folder to `site/plugins/kirby-microlighter`.
@@ -117,7 +114,7 @@ The copy button uses the Clipboard API, which only works on HTTPS (and `localhos
 
 ## Credits
 
-This plugin bundles [MicroLighter](TODO-link-to-microlighter) © 2026 Dave Rupert,
+This plugin bundles [MicroLighter](https://daverupert.com/2026/08/microlighter/) © 2026 Dave Rupert,
 MIT licensed (see `dist/LICENSE-microlighter.txt`). It is an unofficial Kirby
 integration and is not affiliated with the MicroLighter project.
 
